@@ -1,0 +1,89 @@
+{% from "launch_card.html" import render_launch %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpaceX Launches</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/styles.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/background_slideshow.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="background-slideshow"></div>
+
+    <h1 class="futuristic-text">SpaceX Launches</h1>
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#successful"
+          ><i class="fas-fa-successful"></i>Successful</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#failed">Failed</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#upcoming">Upcoming</a>
+      </li>
+    </ul>
+
+    <div class="tab-content header-text">
+      <div id="successful" class="container tab-pane active">
+        {% for launch in launches.successful %} {{render_launch(launch)}} {%
+        endfor %}
+      </div>
+      <div id="failed" class="container tab-pane fade">
+        {% for launch in launches.failed %} {{render_launch(launch)}} {% endfor
+        %}
+      </div>
+      <div id="upcoming" class="container tab-pane fade">
+        {% for launch in launches.upcoming %} {{render_launch(launch)}} {%
+        endfor %}
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h3>Contact Us</h3>
+            <p>Email: batman@gothamcity.com</p>
+            <p>Phone: (123) 456-7890</p>
+          </div>
+          <div class="col">
+            <h3>Follow Us</h3>
+            <a href="#" class="social-icon"
+              ><i class="fab fa-facebook-f"></i> Facebook</a
+            >
+            <a href="#" class="social-icon"
+              ><i class="fab fa-twitter"></i> Twitter</a
+            >
+            <a href="#" class="social-icon"
+              ><i class="fab fa-instagram"></i> Instagram</a
+            >
+            <a href="#" class="social-icon"
+              ><i class="fab fa-github"></i>Github</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

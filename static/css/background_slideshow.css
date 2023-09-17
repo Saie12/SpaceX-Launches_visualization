@@ -1,0 +1,41 @@
+@keyframes slideshow {
+  0% {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/18/491/722/technology-spacex-falcon-9-lift-off-wallpaper-preview.jpg");
+  }
+  20% {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/459/777/198/heat-fire-rocket-spacex-booster-hd-wallpaper-preview.jpg");
+  }
+  40% {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/769/114/520/falcon-heavy-spacex-rocket-astronautics-wallpaper-preview.jpg");
+  }
+  60% {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/559/647/739/5c1cc0125bccc-wallpaper-preview.jpg");
+  }
+  80% {
+    background-image: url("https://c1.wallpaperflare.com/preview/987/704/26/atlantis-space-shuttle-rocket-launch-pad-thumbnail.jpg");
+  }
+  100% {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/18/491/722/technology-spacex-falcon-9-lift-off-wallpaper-preview.jpg");
+  } /* Repeat the first image at the end for a seamless loop */
+}
+
+@keyframes text-color-change {
+  0% {
+    color: #fff;
+  } /* Initial text color */
+  20% {
+    color: #ff0000;
+  } /* Change to red */
+  40% {
+    color: #00ff00;
+  } /* Change to green */
+  60% {
+    color: #0000ff;
+  } /* Change to blue */
+  80% {
+    color: #ff00ff;
+  } /* Change to magenta */
+  100% {
+    color: #fff;
+  } /* Back to initial text color */
+}

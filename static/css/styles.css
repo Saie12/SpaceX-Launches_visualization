@@ -1,0 +1,144 @@
+.launch-card {
+  border: 1px solid #eaeaea;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.launch-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.launch-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+.launch-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.launch-links a {
+  margin-right: 10px;
+}
+
+body {
+  color: #fff;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: transparent;
+}
+
+.futuristic-text {
+  font-family: "Orbitron", sans-serif; /* Use a futuristic font */
+  font-size: 4rem;
+  color: #001f3f; /* Initial text color */
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  animation: pulsate 2.5s infinite alternate;
+}
+
+@keyframes pulsate {
+    0% {
+        color: #001f3f;
+    }
+    50% {
+        color: #0074d9; /* Blue color during animation */
+    }
+    100% {
+        color: #001f3f;
+    }
+}
+
+.btn {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+/* hover effect for buttons */
+.btn:hover {
+  background-color: #f00;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  background-color: #0a0a0a;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* navigation */
+.nav-item a {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-item a:hover {
+  animation: glow 0.5s infinite alternate;
+  transform: rotate(360deg);
+  transition: 0.2s;
+  animation-iteration-count: 3;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+}
+
+.social-icon {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Style the icons */
+.social-icon i {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+/* Add hover effect for social icons */
+.social-icon:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.2s;
+  color: #ff5733; /* text color on hover */
+  transform: rotate(360deg);
+  transition: transform 0.1s;
+}
+
+.background-slideshow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: slideshow 20s infinite; /* Adjust duration */
+}
+
+.header-text {
+  animation: text-color-change 20s infinite; /* Adjust duration to match the slideshow */
+  font-family: "Roboto", cursive;
+  font-size: 20px;
+}
